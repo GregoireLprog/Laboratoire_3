@@ -2,6 +2,7 @@
 # 3 entre utilisateur
 # 1 opérateur logique
 # imprimer le résultat
+import random # dit a l'ordi de choisir une valeur au hasard q'on vas définir
 
 print("inscrivez 3 nombres")
 # Demander trois entrées utilisateur
@@ -25,25 +26,29 @@ if input4 == "non":
     exit() #ferme le programme si "non" est entré
 elif input4 == "oui": # si "oui" est entré, le programme continue
     print("Choisissez entre roche, papier ou ciseaux.") # roche papier ciseaux classique, (une partie)
-else:
-    import random # dit a l'ordi de choisir une valeur au hasard q'on vas définir
+options = ["roche", "papier", "ciseaux"] # répertoire des choix possibles de l'ordinateur et utilisateur
 
-    options = ["roche", "papier", "ciseaux"] # répertoire des choix possibles de l'ordinateur et utilisateur
+if input4 == "non":
+    print("Au revoir!")
+    exit() #ferme le programme si "non" est entré
+elif input4 == "oui": # si "oui" est entré, le programme continue
+    print("Choisissez entre roche, papier ou ciseaux.") # roche papier ciseaux classique, (une partie)
 
-    user_choice = input("Choose roche, papier, or ciseaux:") # demande a l'utilisateur de choisir
-    computer_choice = random.choice(options)
-
-    print("You chose: ", user_choice) # affiche ce que l'utilisateur a choisi
-    print("Computer chose: ", computer_choice) # affiche ce que l'ordinateur a choisi
+user_choice = input("Choose roche, papier, or ciseaux:") # demande a l'utilisateur de choisir
+computer_choice = random.choice(options)
+print("You chose: ", user_choice) # affiche ce que l'utilisateur a choisi
+print("Computer chose: ", computer_choice) # affiche ce que l'ordinateur a choisi
 # condition pour déterminer le gagnant
-    if user_choice == computer_choice:
+if user_choice == computer_choice:
         print("It's a tie!")
-    elif user_choice == "roche" and computer_choice == "ciseaux":
+elif user_choice == "roche" and computer_choice == "ciseaux":
         print("You win!")
-    elif user_choice == "papier" and computer_choice == "roche":
+elif user_choice == "papier" and computer_choice == "roche":
         print("You win!")
-    elif user_choice == "ciseaux" and computer_choice == "papier":
+elif user_choice == "ciseaux" and computer_choice == "papier":
         print("You win!")
-    else:
+else:
         print("Computer wins!")
+print("Merci d'avoir joué!")
+
 # fin du programme
