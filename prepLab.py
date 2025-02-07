@@ -6,10 +6,13 @@ import random # dit a l'ordi de choisir une valeur au hasard q'on vas définir
 
 print("inscrivez 3 nombres")
 # Demander trois entrées utilisateur
-input1 = float(input("Entrez le premier nombre : "))
-input2 = float(input("Entrez le deuxième nombre : "))
-input3 = float(input("Entrez le troisième nombre : "))
-
+try:
+    input1 = float(input("Entrez le premier nombre : "))
+    input2 = float(input("Entrez le deuxième nombre : "))
+    input3 = float(input("Entrez le troisième nombre : "))
+except ValueError: # si l'utilisateur entre autre chose qu'un nombre
+    print("Veuillez entrer un nombre valide.")
+    exit()
 # Utiliser un opérateur logique pour vérifier les conditions
 if input1 > input2 and input1 > input3: # si 1 est plus grand que 2 et 3
     result = f"Le premier nombre {input1} est le plus grand."
@@ -24,10 +27,9 @@ input4 = str(input("Voulez vous jouer a roche papier sciscaux? (oui/non) : "))
 if input4 == "non": # si l'utilisateur choisi non, le programme se ferme
     print("Au revoir!")
     exit()
-elif input4 == "oui": # si "oui" est entré, le programme continue
+if input4 == "oui": # si "oui" est entré, le programme continue
     print("Choisissez entre roche, papier ou ciseaux.") # roche papier ciseaux classique, (une partie)
 options = ["roche", "papier", "ciseaux"] # répertoire des choix possibles de l'ordinateur et utilisateur
-
 
 
 user_choice = input("Choose roche, papier, or ciseaux:") # demande a l'utilisateur de choisir
