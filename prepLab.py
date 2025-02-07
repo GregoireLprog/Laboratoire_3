@@ -1,4 +1,5 @@
-#3 bloc de condition complet
+#pour le lab il faut:
+# 3 bloc de condition complet
 # 3 entre utilisateur
 # 1 opérateur logique
 # imprimer le résultat
