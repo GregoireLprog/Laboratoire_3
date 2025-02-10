@@ -1,8 +1,4 @@
-#pour le lab il faut:
-# 3 bloc de condition complet
-# 3 entre utilisateur
-# 1 opérateur logique
-# imprimer le résultat
+
 import random # dit a l'ordi de choisir une valeur au hasard q'on vas définir
 
 print("inscrivez 3 nombres")
